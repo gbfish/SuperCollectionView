@@ -13,6 +13,14 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
+        
+        if #available(iOS 9.0, *) {
+            let stackView = UIStackView()
+            stackView.alignment = UIStackViewAlignment.Center
+        } else {
+            // Fallback on earlier versions
+        }
+        
     }
 
     override func didReceiveMemoryWarning() {

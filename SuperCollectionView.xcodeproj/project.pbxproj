@@ -14,6 +14,10 @@
 		5672A0DC1B6AFBA100C5E90E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5672A0DA1B6AFBA100C5E90E /* LaunchScreen.storyboard */; };
 		5672A0E71B6AFBA100C5E90E /* SuperCollectionViewTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5672A0E61B6AFBA100C5E90E /* SuperCollectionViewTests.swift */; };
 		5672A0F21B6AFBA100C5E90E /* SuperCollectionViewUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5672A0F11B6AFBA100C5E90E /* SuperCollectionViewUITests.swift */; };
+		567467BE1B6C4E48000A13E6 /* SpriteKitScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = 567467BD1B6C4E48000A13E6 /* SpriteKitScene.sks */; };
+		567467C01B6C5177000A13E6 /* SceneKitScene.scn in Resources */ = {isa = PBXBuildFile; fileRef = 567467BF1B6C5177000A13E6 /* SceneKitScene.scn */; };
+		567467C31B6C526F000A13E6 /* MyParticle.sks in Resources */ = {isa = PBXBuildFile; fileRef = 567467C11B6C526F000A13E6 /* MyParticle.sks */; };
+		567467C41B6C526F000A13E6 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 567467C21B6C526F000A13E6 /* spark.png */; };
 		903984A75E638EA07DAF6C9D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C56EBB408809DE88A48E2437 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -49,6 +53,10 @@
 		5672A0ED1B6AFBA100C5E90E /* SuperCollectionViewUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SuperCollectionViewUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5672A0F11B6AFBA100C5E90E /* SuperCollectionViewUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SuperCollectionViewUITests.swift; sourceTree = "<group>"; };
 		5672A0F31B6AFBA100C5E90E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		567467BD1B6C4E48000A13E6 /* SpriteKitScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = SpriteKitScene.sks; sourceTree = "<group>"; };
+		567467BF1B6C5177000A13E6 /* SceneKitScene.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = SceneKitScene.scn; sourceTree = "<group>"; };
+		567467C11B6C526F000A13E6 /* MyParticle.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = MyParticle.sks; sourceTree = "<group>"; };
+		567467C21B6C526F000A13E6 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
 		76397EBD08A6058538971DF1 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		C56EBB408809DE88A48E2437 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -114,6 +122,10 @@
 			children = (
 				5672A0D11B6AFBA100C5E90E /* AppDelegate.swift */,
 				5672A0D31B6AFBA100C5E90E /* ViewController.swift */,
+				567467BD1B6C4E48000A13E6 /* SpriteKitScene.sks */,
+				567467C11B6C526F000A13E6 /* MyParticle.sks */,
+				567467C21B6C526F000A13E6 /* spark.png */,
+				567467BF1B6C5177000A13E6 /* SceneKitScene.scn */,
 				5672A0D51B6AFBA100C5E90E /* Main.storyboard */,
 				5672A0D81B6AFBA100C5E90E /* Assets.xcassets */,
 				5672A0DA1B6AFBA100C5E90E /* LaunchScreen.storyboard */,
@@ -256,7 +268,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				5672A0DC1B6AFBA100C5E90E /* LaunchScreen.storyboard in Resources */,
+				567467C31B6C526F000A13E6 /* MyParticle.sks in Resources */,
+				567467C01B6C5177000A13E6 /* SceneKitScene.scn in Resources */,
+				567467C41B6C526F000A13E6 /* spark.png in Resources */,
 				5672A0D91B6AFBA100C5E90E /* Assets.xcassets in Resources */,
+				567467BE1B6C4E48000A13E6 /* SpriteKitScene.sks in Resources */,
 				5672A0D71B6AFBA100C5E90E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -460,6 +476,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SuperCollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Equalbean.SuperCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -472,6 +489,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = SuperCollectionView/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Equalbean.SuperCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
