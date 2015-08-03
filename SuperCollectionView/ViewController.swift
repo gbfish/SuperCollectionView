@@ -21,6 +21,12 @@ class ViewController: UIViewController {
             // Fallback on earlier versions
         }
         
+        
+        let model = CVMImage()
+        model.functionArray.append(CVFunctionLikeTap(tapId: 1234))
+        
+        model.functionArray[0].action()
+        
     }
 
     override func didReceiveMemoryWarning() {

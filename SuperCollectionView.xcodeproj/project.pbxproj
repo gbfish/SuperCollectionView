@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		560E02C31B7021BC00EB54E2 /* CVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560E02C21B7021BC00EB54E2 /* CVModel.swift */; };
+		560E02C91B702A0500EB54E2 /* CVFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560E02C81B702A0500EB54E2 /* CVFunction.swift */; };
 		5672A0D21B6AFBA100C5E90E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5672A0D11B6AFBA100C5E90E /* AppDelegate.swift */; };
 		5672A0D41B6AFBA100C5E90E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5672A0D31B6AFBA100C5E90E /* ViewController.swift */; };
 		5672A0D71B6AFBA100C5E90E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5672A0D51B6AFBA100C5E90E /* Main.storyboard */; };
@@ -40,6 +42,9 @@
 
 /* Begin PBXFileReference section */
 		229158084455881B9BB04982 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		560E02C21B7021BC00EB54E2 /* CVModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVModel.swift; sourceTree = "<group>"; };
+		560E02C41B70256100EB54E2 /* SuperCollectionView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SuperCollectionView-Bridging-Header.h"; sourceTree = "<group>"; };
+		560E02C81B702A0500EB54E2 /* CVFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVFunction.swift; sourceTree = "<group>"; };
 		5672A0CE1B6AFBA100C5E90E /* SuperCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5672A0D11B6AFBA100C5E90E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5672A0D31B6AFBA100C5E90E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +100,15 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		560E02C11B7020E300EB54E2 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				560E02C21B7021BC00EB54E2 /* CVModel.swift */,
+				560E02C81B702A0500EB54E2 /* CVFunction.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
 		5672A0C51B6AFBA100C5E90E = {
 			isa = PBXGroup;
 			children = (
@@ -120,6 +134,7 @@
 		5672A0D01B6AFBA100C5E90E /* SuperCollectionView */ = {
 			isa = PBXGroup;
 			children = (
+				560E02C11B7020E300EB54E2 /* Model */,
 				5672A0D11B6AFBA100C5E90E /* AppDelegate.swift */,
 				5672A0D31B6AFBA100C5E90E /* ViewController.swift */,
 				567467BD1B6C4E48000A13E6 /* SpriteKitScene.sks */,
@@ -130,6 +145,7 @@
 				5672A0D81B6AFBA100C5E90E /* Assets.xcassets */,
 				5672A0DA1B6AFBA100C5E90E /* LaunchScreen.storyboard */,
 				5672A0DD1B6AFBA100C5E90E /* Info.plist */,
+				560E02C41B70256100EB54E2 /* SuperCollectionView-Bridging-Header.h */,
 			);
 			path = SuperCollectionView;
 			sourceTree = "<group>";
@@ -331,7 +347,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				560E02C31B7021BC00EB54E2 /* CVModel.swift in Sources */,
 				5672A0D41B6AFBA100C5E90E /* ViewController.swift in Sources */,
+				560E02C91B702A0500EB54E2 /* CVFunction.swift in Sources */,
 				5672A0D21B6AFBA100C5E90E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,11 +493,14 @@
 			baseConfigurationReference = 76397EBD08A6058538971DF1 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SuperCollectionView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Equalbean.SuperCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SuperCollectionView/SuperCollectionView-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -488,11 +509,13 @@
 			baseConfigurationReference = 229158084455881B9BB04982 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = SuperCollectionView/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = Equalbean.SuperCollectionView;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "SuperCollectionView/SuperCollectionView-Bridging-Header.h";
 			};
 			name = Release;
 		};
