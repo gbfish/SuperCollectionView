@@ -1,5 +1,5 @@
 //
-//  CVFunction.swift
+//  CVMFunction.swift
 //  SuperCollectionView
 //
 //  Created by David Yu on 15/8/3.
@@ -8,22 +8,28 @@
 
 import Foundation
 
-protocol CVFunction {
-    func action()
+protocol CVFunction
+{
+    func action(navigation: UINavigationController?)
 }
 
-struct CVFunctionLikeTap: CVFunction {
+struct CVFunctionLikeTap: CVFunction
+{
     init(tapId: Int) {
         argumentTapId = tapId
     }
     
     var argumentTapId: Int = 0
     
-    func action() {
+    func action(navigation: UINavigationController?) {
         TapitureAPIClient.sharedClient().userService.likeTapWithUserId(1070261, andTapId: argumentTapId, success: { (_) -> Void in
             
         }) { (_) -> Void in
             
+        }
+        
+        if let theNavigation = navigation {
+            theNavigation.pushViewController(UIViewController(), animated: true)
         }
     }
 }

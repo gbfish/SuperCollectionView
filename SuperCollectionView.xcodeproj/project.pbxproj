@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		560E02C31B7021BC00EB54E2 /* CVModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560E02C21B7021BC00EB54E2 /* CVModel.swift */; };
 		560E02C91B702A0500EB54E2 /* CVFunction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560E02C81B702A0500EB54E2 /* CVFunction.swift */; };
+		560E02CB1B71212700EB54E2 /* CVComponent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 560E02CA1B71212600EB54E2 /* CVComponent.swift */; };
+		565E35041B715A81003A114B /* CVLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565E35031B715A81003A114B /* CVLayout.swift */; };
+		565E350A1B715DAB003A114B /* CVCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565E35091B715DAB003A114B /* CVCell.swift */; };
+		565E35101B7164DF003A114B /* CVStoryboard.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 565E350F1B7164DF003A114B /* CVStoryboard.storyboard */; };
+		565E35121B71651B003A114B /* CVController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 565E35111B71651B003A114B /* CVController.swift */; };
 		5672A0D21B6AFBA100C5E90E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5672A0D11B6AFBA100C5E90E /* AppDelegate.swift */; };
 		5672A0D41B6AFBA100C5E90E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5672A0D31B6AFBA100C5E90E /* ViewController.swift */; };
 		5672A0D71B6AFBA100C5E90E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5672A0D51B6AFBA100C5E90E /* Main.storyboard */; };
@@ -45,6 +50,11 @@
 		560E02C21B7021BC00EB54E2 /* CVModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVModel.swift; sourceTree = "<group>"; };
 		560E02C41B70256100EB54E2 /* SuperCollectionView-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SuperCollectionView-Bridging-Header.h"; sourceTree = "<group>"; };
 		560E02C81B702A0500EB54E2 /* CVFunction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVFunction.swift; sourceTree = "<group>"; };
+		560E02CA1B71212600EB54E2 /* CVComponent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVComponent.swift; sourceTree = "<group>"; };
+		565E35031B715A81003A114B /* CVLayout.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVLayout.swift; sourceTree = "<group>"; };
+		565E35091B715DAB003A114B /* CVCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVCell.swift; sourceTree = "<group>"; };
+		565E350F1B7164DF003A114B /* CVStoryboard.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = CVStoryboard.storyboard; sourceTree = "<group>"; };
+		565E35111B71651B003A114B /* CVController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CVController.swift; sourceTree = "<group>"; };
 		5672A0CE1B6AFBA100C5E90E /* SuperCollectionView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SuperCollectionView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5672A0D11B6AFBA100C5E90E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5672A0D31B6AFBA100C5E90E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -100,13 +110,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		560E02C11B7020E300EB54E2 /* Model */ = {
+		560E02C11B7020E300EB54E2 /* Data */ = {
 			isa = PBXGroup;
 			children = (
 				560E02C21B7021BC00EB54E2 /* CVModel.swift */,
+				560E02CA1B71212600EB54E2 /* CVComponent.swift */,
 				560E02C81B702A0500EB54E2 /* CVFunction.swift */,
 			);
-			name = Model;
+			name = Data;
+			sourceTree = "<group>";
+		};
+		565E35001B715904003A114B /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				565E35111B71651B003A114B /* CVController.swift */,
+				565E35031B715A81003A114B /* CVLayout.swift */,
+				565E35091B715DAB003A114B /* CVCell.swift */,
+				565E350F1B7164DF003A114B /* CVStoryboard.storyboard */,
+			);
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		5672A0C51B6AFBA100C5E90E = {
@@ -134,7 +156,8 @@
 		5672A0D01B6AFBA100C5E90E /* SuperCollectionView */ = {
 			isa = PBXGroup;
 			children = (
-				560E02C11B7020E300EB54E2 /* Model */,
+				565E35001B715904003A114B /* ViewController */,
+				560E02C11B7020E300EB54E2 /* Data */,
 				5672A0D11B6AFBA100C5E90E /* AppDelegate.swift */,
 				5672A0D31B6AFBA100C5E90E /* ViewController.swift */,
 				567467BD1B6C4E48000A13E6 /* SpriteKitScene.sks */,
@@ -283,6 +306,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565E35101B7164DF003A114B /* CVStoryboard.storyboard in Resources */,
 				5672A0DC1B6AFBA100C5E90E /* LaunchScreen.storyboard in Resources */,
 				567467C31B6C526F000A13E6 /* MyParticle.sks in Resources */,
 				567467C01B6C5177000A13E6 /* SceneKitScene.scn in Resources */,
@@ -347,9 +371,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				565E350A1B715DAB003A114B /* CVCell.swift in Sources */,
 				560E02C31B7021BC00EB54E2 /* CVModel.swift in Sources */,
+				565E35121B71651B003A114B /* CVController.swift in Sources */,
 				5672A0D41B6AFBA100C5E90E /* ViewController.swift in Sources */,
+				560E02CB1B71212700EB54E2 /* CVComponent.swift in Sources */,
 				560E02C91B702A0500EB54E2 /* CVFunction.swift in Sources */,
+				565E35041B715A81003A114B /* CVLayout.swift in Sources */,
 				5672A0D21B6AFBA100C5E90E /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
