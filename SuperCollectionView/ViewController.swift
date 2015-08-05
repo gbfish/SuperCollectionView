@@ -29,6 +29,23 @@ class ViewController: UIViewController {
         
         
 //        model.functionArray[0].puchViewController(navigationController!)
+
+        
+//        let model = CVModelFeed()
+//        model.dataWillLoad()
+        
+        TapitureAPIClient.sharedClient().userService.loginWithUsername("gbfish", andPassword: "801023", success: { (responseObject) -> Void in
+//            println("responseObject \(responseObject)")
+//            
+//            if let theResponseDictionary = responseObject as? NSDictionary, userDictionary = theResponseDictionary.objectForKey("user") as? NSDictionary {
+//                self.setCurrentUserWithDict(userDictionary)
+//            }
+//            success()
+            
+        }) { (error) -> Void in
+//                failure()
+//                println("error = \(error)")
+        }
         
     }
     
@@ -49,7 +66,10 @@ class ViewController: UIViewController {
     @IBAction func redAction(sender: UITapGestureRecognizer) {
         print("red action")
         
-        let viewController = UIStoryboard(name: "CVStoryboard", bundle: nil).instantiateViewControllerWithIdentifier("CVController")
+        guard let viewController = UIStoryboard(name: "CVStoryboard", bundle: nil).instantiateViewControllerWithIdentifier("CVController") as? CVController else {
+            return
+        }
+        viewController.model = CVModelFeed()
         navigationController?.pushViewController(viewController, animated: true)
     }
 
